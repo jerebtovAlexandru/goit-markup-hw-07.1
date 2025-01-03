@@ -41,29 +41,29 @@
   color: $primary-text-color;
 
   transition: color 250ms $cubik-linear;
-}
 
-.list-menu__link:hover,
-.list-menu__link:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .list-menu__link--current {
   color: $accent-color;
   position: relative;
-}
 
-.list-menu__link--current::after {
-  display: block;
-  position: absolute;
-  content: "";
-  bottom: 0;
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: 0;
 
-  width: 100%;
-  height: 4px;
+    width: 100%;
+    height: 4px;
 
-  background-color: $accent-color;
-  border-radius: 2px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
 }
 
 .address-header {
@@ -97,11 +97,17 @@
   letter-spacing: 0.02em;
 
   transition: color 250ms $cubik-linear;
+
+  &:hover ,
+  &:focus  {
+      color: $accent-color;
+  }
+
+&:hover .contacts__svg,
+&:focus .contacts__svg {
+  fill: $accent-color;
 }
 
-.contacts__link:hover,
-.contacts__link:focus {
-  color: $accent-color;
 }
 
 .contacts__svg {
@@ -112,7 +118,3 @@
   transition: fill 250ms $cubik-linear;
 }
 
-.contacts__link:hover .contacts__svg,
-.contacts__link:focus .contacts__svg {
-  fill: $accent-color;
-}

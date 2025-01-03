@@ -10,9 +10,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 270px;
-}
-.list-warning__item:not(:last-child) {
-  margin-right: 30px;
+
+  &:not(:last-child){
+      margin-right: 30px;
+  }
 }
 
 .list-warning__title {

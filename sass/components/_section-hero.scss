@@ -9,7 +9,7 @@
 
   background-color: #2f303a;
   background-image: url(../images/img-hiro.jpg),
-  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .section-hero__title {
@@ -42,52 +42,51 @@
 
   color: #ffffff;
   background-color: #2196f3;
-  transition: background-color 250ms $cubik-linear,
-    color 250ms $cubik-linear;
+  transition: background-color 250ms $cubik-linear, color 250ms $cubik-linear;
 
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-}
 
-.section-hero__button::after {
-  background-image: url(../images/finger.png);
-  background-size: contain;
-  content: "";
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
-  transition: transform 250ms $cubik-linear;
-}
+  &:focus,
+  &:hover {
+    color: $accent-color;
+    background-color: $white-text-color;
+  }
 
-.section-hero__button:hover::after,
-.section-hero__button:focus::after {
-  transform: translateY(-35px);
-}
+  &::after {
+    background-image: url(../images/finger.png);
+    background-size: contain;
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transition: transform 250ms $cubik-linear;
+  }
 
-.section-hero__button::before {
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  transform: translateY(calc(-50% + 35px));
-  transition: transform 250ms $cubik-linear;
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(-35px);
+  }
 
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/galockka.png);
-  background-size: contain;
-}
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(calc(-50% + 35px));
+    transition: transform 250ms $cubik-linear;
 
-.section-hero__button:hover::before,
-.section-hero__button:focus::before {
-  transform: translateY(-50%);
-}
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/galockka.png);
+    background-size: contain;
+  }
 
-.section-hero__button:focus,
-.section-hero__button:hover {
-  color: $accent-color;
-  background-color: $white-text-color;
+  &:hover::before,
+  &:focus::before {
+    transform: translateY(-50%);
+  }
 }

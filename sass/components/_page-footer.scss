@@ -25,6 +25,11 @@
   margin-top: 20px;
   margin-bottom: 9px;
   transition: color 250ms $cubik-linear;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .address-element__link {
@@ -34,13 +39,11 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   transition: color 250ms $cubik-linear;
-}
 
-.address-element__link:hover,
-.address-element__link:focus,
-.address-element__street:hover,
-.address-element__street:focus {
+  &:hover,
+  &:focus {
   color: $accent-color;
+  }
 }
 
 .address-element__item--bottom {
@@ -61,28 +64,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-
-/* Иконки  */
-.social-list__icon--white {
-  fill: $white-text-color;
-}
-
-.social-list__link--grey {
-  display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms $cubik-linear;
-}
-
-.social-list__link--grey :hover,
-.social-list__link--grey :focus {
-  background-color: $accent-color;
 }
 
 /* ОФОРМЛЕНИЕ ПОДПИСКИ НА РАССЫЛКУ */

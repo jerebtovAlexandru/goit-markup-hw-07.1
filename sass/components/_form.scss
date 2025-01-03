@@ -1,4 +1,3 @@
-
 .form {
   width: 448px;
   margin-left: auto;
@@ -23,10 +22,10 @@
   flex-direction: column;
   margin-bottom: 10px;
   transition: fill 250ms $cubik-linear;
-}
 
-.form__field:focus-within {
-  fill: $accent-color;
+  &:focus-within {
+    fill: $accent-color;
+  }
 }
 
 .form__icon {
@@ -42,20 +41,19 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms $cubik-linear;
-}
 
+  &:focus,
+  &:hover {
+    border: 1px solid $accent-color;
+  }
 
-.form__input:valid:not(:placeholder-shown) {
-  border: 1px solid green;
-}
+  &:valid:not(:placeholder-shown) {
+    border: 1px solid green;
+  }
 
-.form__input:invalid:not(:placeholder-shown) {
-  border: 1px solid RED;
-}
-
-.form__input:focus,
-.form__input:hover {
-  border: 1px solid $accent-color;
+  &:invalid:not(:placeholder-shown) {
+    border: 1px solid RED;
+  }
 }
 
 .form__coment {
@@ -68,19 +66,20 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms $cubik-linear;
-}
-.form__coment:hover,
-.form__coment:focus {
-  border: 1px solid $accent-color;
-}
-.form__coment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 1%;
-}
 
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 1%;
+  }
+}
 
 .checkbox {
   display: flex;
@@ -109,8 +108,7 @@
   border-radius: 4px;
   border: 2px solid black;
   transition: background-color 250ms $cubik-linear,
-    background-origin 250ms $cubik-linear,
-    border 250ms $cubik-linear;
+    background-origin 250ms $cubik-linear, border 250ms $cubik-linear;
 }
 
 .checkbox__input:checked + .checkbox__mark {
@@ -159,8 +157,9 @@
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-}
-.form__button:focus,
-.form__button:hover {
-  background-color: rgba(24, 140, 232, 1);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(24, 140, 232, 1);
+  }
 }
